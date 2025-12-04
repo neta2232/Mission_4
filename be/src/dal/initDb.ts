@@ -36,7 +36,7 @@ CREATE TABLE AccountOperations (
 }
 
 async function generateSampleData() {
-/*await runQuery(`
+await runQuery(`
 INSERT INTO BankAccounts (account_number, customer_name) 
 VALUES
     ('IL010023456789001', 'David Cohen'),
@@ -49,7 +49,7 @@ VALUES
     ('IL080078901234567', 'Noa Friedman'),
     ('IL090091234567890', 'Yossi Ben-David'),
     ('IL100012345678902', 'Maya Azulay');
-`);*/
+`);
 await runQuery(`
 INSERT INTO AccountOperations (account, action_type, amount, interest, payments) 
 VALUES

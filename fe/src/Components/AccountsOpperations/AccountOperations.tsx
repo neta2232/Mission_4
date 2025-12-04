@@ -19,9 +19,9 @@ const AccountOperations = () => {
 
       if (res.data.length > 0) {
         setAccountId(res.data[0].account);
-        setAccountCorrect(true); // ✅ אם יש תוצאות – ההודעה נעלמת
+        setAccountCorrect(true); 
       } else {
-        setAccountCorrect(false); // ❌ אם אין תוצאות – מציגים הודעת שגיאה
+        setAccountCorrect(false);
       }
 
       setShowAddForm(true);
@@ -31,18 +31,16 @@ const AccountOperations = () => {
     }
   }
 
-  function handleAddOperation(newOp: Operation) {
-    console.log(newOp);
-    
+  function handleAddOperation(newOp: Operation) {    
     setOperations((prev) => [...prev, newOp]); 
   }
 
   return (
     <div className="main-container">
       <h1>Account Operations</h1>
-      <label>Please write account number</label>
+      <label>Please write account number: </label>
       <br />
-      <input
+      <input placeholder="write here..."
         value={accountNumber}
         onChange={(e) => setAccountNumber(e.target.value)}
       />
@@ -50,13 +48,13 @@ const AccountOperations = () => {
 
       {!accountCorrect && (
         <p id="pid" style={{ color: "red", marginTop: "10px" }}>
-          Please insert an existing account number
+          Please write an existing account number
         </p>
       )}
 
       <div className="operations-grid">
         {operations.map((op) => (
-          <div key={op.id} className="card">
+          <div key={op.id} className="card w-25 my-card">
             <p>operation type: {op.action_type}</p>
             <p>amount: {op.amount}₪</p>
             <p className="date">
@@ -68,7 +66,6 @@ const AccountOperations = () => {
         ))}
       </div>
 
-      {/* טופס להוספת פעולה חדשה יוצג רק אחרי לחיצה על הכפתור */}
       {showAddForm && accountId && (
         <AddOperation accountId={accountId} onAddOperation={handleAddOperation} />
       )}

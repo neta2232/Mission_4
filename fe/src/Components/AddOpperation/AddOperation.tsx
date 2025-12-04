@@ -41,8 +41,8 @@ const AddOperation = ({ accountId, onAddOperation }: AddOperationProps) => {
       const res = await fetchaddOperation(operation);
       if (!res) throw new Error("Error while trying to add operation");
 
-      const newOp: Operation = operation; // הפעולה החדשה מהשרת
-      onAddOperation(newOp); // מוסיפים אותה ל־state של ההורה
+      const newOp: Operation = operation; 
+      onAddOperation(newOp);
 
       setForm({ actionType: "", amount: "", interest: "", payments: "" });
       setSuccess(true);
@@ -65,33 +65,12 @@ const AddOperation = ({ accountId, onAddOperation }: AddOperationProps) => {
 
       {form.actionType && (
         <div>
-          <input
-            type="number"
-            name="amount"
-            placeholder="Amount"
-            value={form.amount}
-            onChange={handleChange}
-            required
-          />
+          <input type="number" name="amount" placeholder="Amount" value={form.amount} onChange={handleChange} required/>
 
           {form.actionType === "loan" && (
             <div className="inline-grid">
-              <input
-                type="number"
-                name="interest"
-                placeholder="Interest"
-                value={form.interest}
-                onChange={handleChange}
-                required
-              />
-              <input
-                type="number"
-                name="payments"
-                placeholder="Payments"
-                value={form.payments}
-                onChange={handleChange}
-                required
-              />
+              <input type="number" name="interest" placeholder="Interest" value={form.interest} onChange={handleChange} required/>
+              <input type="number" name="payments" placeholder="Payments" value={form.payments} onChange={handleChange} required/>
             </div>
           )}
         </div>
