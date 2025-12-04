@@ -1,0 +1,136 @@
+.container {
+  max-width: 960px;
+  margin: 32px auto;
+  padding: 0 16px;
+}
+
+.title {
+  margin-bottom: 16px;
+  font-weight: 700;
+  color: #1f2937; /* slate-800 */
+}
+
+.toolbar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.input {
+  height: 38px;
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+
+.btn {
+  height: 38px;
+  padding: 0 14px;
+  border: none;
+  border-radius: 8px;
+  background: #111827;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.amount {
+  font-weight: 700;
+  color: #111827;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  border-radius: 999px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.badge-deposit { background: #10b981; }
+.badge-withdrawal { background: #f59e0b; }
+.badge-loan { background: #3b82f6; }
+
+.main-container {
+  max-width: 1000px;
+  margin: 40px auto;              /* מרכז את התוכן */
+  padding: 30px;                  /* ריווח פנימי */
+  background: #f9fafb;            /* רקע אפור בהיר */
+  border-radius: 16px;            /* פינות מעוגלות */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08); /* צל עדין */
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #0f172a;                 /* טקסט כהה */
+}
+
+/* כותרת ראשית */
+.main-container h1 {
+  margin-bottom: 24px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b; /* slate-800 */
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+/* שדות קלט וכפתורים */
+.main-container input {
+  height: 42px;
+  padding: 10px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #ffffff;
+  width: 280px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.main-container input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99,102,241,0.15);
+}
+
+.main-container button {
+  height: 42px;
+  margin-left: 12px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 10px;
+  background: #4f46e5; /* indigo-600 */
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.main-container button:hover {
+  background: #4338ca; /* indigo-700 */
+}
+
+.main-container button:active {
+  transform: translateY(1px);
+}
+#pid{
+    color: red;
+}
